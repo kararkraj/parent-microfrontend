@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   title = 'parent';
+  data: any = 'something from parent!';
+  memoryUsed!: number;
+
+  getDataBack($event: string) {
+    this.memoryUsed = parseInt($event);
+  }
 }
